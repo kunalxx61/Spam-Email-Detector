@@ -5,29 +5,39 @@ import joblib
 model = joblib.load("spam_model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 
+# Page settings
 st.set_page_config(
-    page_title="Spam Email Detector",
+    page_title="AI Powered Spam Email Detector",
     page_icon="📧",
     layout="centered"
 )
 
+# Title
 st.title("📧 AI Powered Spam Email Detector")
-st.write("Enter an email or SMS message below to check whether it is Spam or Not Spam.")
+st.write("Enter an email below to check whether it is **Spam** or **Not Spam**.")
 
-message = st.text_area("Enter Message")
+# Input
+message = st.text_area("Enter Email", height=200)
 
+# Button
 if st.button("Check Message"):
 
     if message.strip() == "":
-        st.warning("Please enter a message.")
+        st.warning("Please enter an email.")
     else:
         message_vector = vectorizer.transform([message])
 
-        prediction = model.predict(message_vector)
-        probability = model.predict_proba(message_vector)
-        confidence = max(probability[0]) * 100
+        prediction = model.predict(message_vector)[0]
+        probability = model.predict_proba(message_vector)[0]
+        confidence = max(probability) * 100
 
-        if prediction[0] == 1:
-            st.error(f"🚨 Spam Email\n\nConfidence: {confidence:.2f}%")
+        if prediction == 1:
+            st.error("🚨 Spam Email")
         else:
-            st.success(f"✅ Not Spam\n\nConfidence: {confidence:.2f}%")
+            st.success("✅ Not Spam")
+
+        st.info(f"Confidence: {confidence:.2f}%")
+
+# Footer
+st.markdown("---")
+st.caption("Developed by Kunal | Python • Scikit-learn • Logistic Regression • TF-IDF")
