@@ -1,71 +1,92 @@
 # 📧 AI Powered Spam Email Detector
 
-## 📌 Project Description
+An AI-powered Email Spam Detection System built using Python and Machine Learning.
 
-The AI Powered Spam Email Detector is a Machine Learning project developed using Python and Scikit-learn. It classifies incoming email or SMS messages as Spam or Not Spam using the Multinomial Naive Bayes algorithm.
+## 🚀 Live Demo
 
-The project converts text messages into numerical features using TF-IDF Vectorization and predicts whether a message is spam.
-
----
-
-## 🚀 Features
-
-- Detects Spam and Not Spam messages
-- User-friendly GUI using Tkinter
-- Confidence score for every prediction
-- Fast and lightweight
-- Easy to use
+https://spam-email-detector-kunal.streamlit.app/
 
 ---
 
-## 🛠 Technologies Used
+## Features
+
+- Detects Spam and Not Spam emails
+- Uses TF-IDF for text feature extraction
+- Logistic Regression Machine Learning model
+- Shows prediction confidence
+- Web interface using Streamlit
+- Fast and easy to use
+
+---
+
+## Technologies Used
 
 - Python
-- Scikit-learn
 - Pandas
-- Joblib
-- Tkinter
+- Scikit-learn
+- Logistic Regression
 - TF-IDF Vectorizer
-- Multinomial Naive Bayes
+- Streamlit
+- Joblib
 
 ---
 
-## 📂 Project Structure
+## Dataset
+
+- Email Spam Classification Dataset
+- Total Emails: **83,448**
+
+---
+
+## Model Accuracy
+
+**98.60%**
+
+---
+
+## Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/kunalxx61/Spam-Email-Detector.git
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application
+
+```bash
+streamlit run streamlit_app.py
+```
+
+---
+
+## Project Structure
 
 ```
-Spam Email Detector
+Spam-Email-Detector/
 │
-├── email.csv
 ├── train.py
+├── streamlit_app.py
 ├── app.py
 ├── gui.py
 ├── spam_model.pkl
 ├── vectorizer.pkl
-├── README.md
-└── requirements.txt
+├── combined_data.csv
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## 📊 Machine Learning Workflow
-
-1. Load Dataset
-2. Data Preprocessing
-3. Convert Labels
-4. TF-IDF Vectorization
-5. Train-Test Split
-6. Train Naive Bayes Model
-7. Save Model
-8. Predict Spam
-
----
-
-## 🎯 Model Accuracy
-
-Accuracy: **96.5%**
-
----
-
-## 👨‍💻 Developed By
+## Author
 
 **Kunal**
+
+GitHub:
+https://github.com/kunalxx61
