@@ -1,25 +1,27 @@
 # 📧 AI Powered Spam Email Detector
 
-An AI-powered Email Spam Detection System built using Python and Machine Learning.
+An AI-powered Email Spam Detection System built using **Python** and **Machine Learning** to classify emails as **Spam** or **Not Spam**.
 
-## 🚀 Live Demo
+## 🌐 Live Demo
 
 https://spam-email-detector-kunal.streamlit.app/
 
 ---
 
-## Features
+## 🚀 Features
 
 - Detects Spam and Not Spam emails
-- Uses TF-IDF for text feature extraction
-- Logistic Regression Machine Learning model
-- Shows prediction confidence
-- Web interface using Streamlit
-- Fast and easy to use
+- Machine Learning based classification
+- TF-IDF text vectorization
+- Logistic Regression classifier
+- Displays prediction confidence
+- Web interface built with Streamlit
+- Desktop GUI built with Tkinter
+- Command-line version included
 
 ---
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - Pandas
@@ -27,29 +29,62 @@ https://spam-email-detector-kunal.streamlit.app/
 - Logistic Regression
 - TF-IDF Vectorizer
 - Streamlit
+- Tkinter
 - Joblib
 
 ---
 
-## Dataset
+## 📂 Dataset
 
-- Email Spam Classification Dataset
+**Spam Email Classification Dataset** (Kaggle)
+
 - Total Emails: **83,448**
+- Spam and legitimate email samples
+- Dataset used only for training the model
+
+> **Note:** The dataset is not included in this repository because it exceeds GitHub's 100 MB file size limit.
 
 ---
 
-## Model Accuracy
+## 📈 Model Performance
 
-**98.60%**
+| Metric | Value |
+|--------|-------|
+| Model | Logistic Regression |
+| Feature Extraction | TF-IDF |
+| Accuracy | **98.60%** |
 
 ---
 
-## Installation
+## 📁 Project Structure
+
+```
+Spam-Email-Detector/
+│
+├── train.py
+├── app.py
+├── gui.py
+├── streamlit_app.py
+├── spam_model.pkl
+├── vectorizer.pkl
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
 
 Clone the repository
 
 ```bash
 git clone https://github.com/kunalxx61/Spam-Email-Detector.git
+```
+
+Open the project folder
+
+```bash
+cd Spam-Email-Detector
 ```
 
 Install dependencies
@@ -58,7 +93,7 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Run the application
+Run the Streamlit application
 
 ```bash
 streamlit run streamlit_app.py
@@ -66,27 +101,20 @@ streamlit run streamlit_app.py
 
 ---
 
-## Project Structure
+## 📸 Screenshots
 
-```
-Spam-Email-Detector/
-│
-├── train.py
-├── streamlit_app.py
-├── app.py
-├── gui.py
-├── spam_model.pkl
-├── vectorizer.pkl
-├── combined_data.csv
-├── requirements.txt
-└── README.md
-```
+*(Add screenshots of your application here later.)*
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 **Kunal**
 
-GitHub:
-https://github.com/kunalxx61
+GitHub: https://github.com/kunalxx61
+
+---
+
+## ⭐ If you like this project
+
+Give this repository a ⭐ on GitHub.
